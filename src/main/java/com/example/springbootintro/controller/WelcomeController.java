@@ -21,6 +21,7 @@ public class WelcomeController {
 
     @GetMapping("/hej/{id}")
     public ResponseEntity<String> sayWelcome(@PathVariable int id) {
+        // exception doesn't work
         try {
             String msg = welcomeService.getWelcomeMessage(id);
             return new ResponseEntity<>(msg, HttpStatus.OK);
